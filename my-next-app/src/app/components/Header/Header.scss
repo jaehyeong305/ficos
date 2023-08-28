@@ -1,0 +1,10 @@
+@import 'src/styles/vars/colors';
+
+div.header-wraaper {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    height: 100px;
+    background-color: $primary;
+}
