@@ -1,13 +1,17 @@
-import React from "react";
-import "./Header.scss";
+import React, {CSSProperties} from "react";
+import styles from "./Header.module.scss";
+import Icon from "../Icon/Icon";
 
 const Header: React.FC = () => {
+    const iconStyle: CSSProperties = {
+        width: '40px',
+        marginRight: '20px',
+    }
+
     return (
-        <div className="header-wraaper">
-            <div className="header-logo">FICOS</div>
-            <div className="open-pane">
-                <img src="/icons/icon_menu.svg" alt="menu"/>
-            </div>
+        <div className={styles.headerWraaper}>
+            <div className={styles.headerLogo}>FICOS</div>
+            <Icon icon="menu" style={iconStyle}/>
         </div>
     )
 }

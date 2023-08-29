@@ -1,6 +1,6 @@
 @import 'src/styles/vars/colors';
 
-div.header-wraaper {
+.header-wraaper {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -15,20 +15,12 @@ div.header-wraaper {
         background-color: $primary;
         box-shadow: 1px 1px 5px $primary-dark;
     }
+}
 
-    > div.header-logo {
-        margin-left: 20px;
-        font-size: 38px;
-        font-weight: 600;
-        color: $primary-white;
-        text-shadow: 2px 1px $primary;
-    }
-
-    > div.open-pane {
-        margin-right: 20px;
-
-        > img {
-            width: 40px;
-        }
-    }
+.header-logo {
+    margin-left: 20px;
+    font-size: 38px;
+    font-weight: 600;
+    color: $primary-white;
+    text-shadow: 2px 1px $primary;
 }
