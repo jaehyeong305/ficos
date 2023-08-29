@@ -1,0 +1,45 @@
+@import 'src/styles/vars/colors';
+
+div.main-wrapper {
+    
+    > section.main-cover {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        
+        background-size: cover;
+        
+        > div.top {
+            flex: 0 0 37%;
+        }
+        
+        > div.main-title {
+            background-color: rgba($primary, 0.8);
+            
+            text-align: center;
+            
+            > span.title {
+                display: block;
+                
+                padding-top: 30px;
+                
+                font-size: 70px;
+                font-weight: 700;
+                color: $primary-white;
+                text-shadow: 1px 1px $primary-blue;
+            }
+        
+            > span.description {
+                display: inline-block;
+                padding-top: 10px;
+                padding-bottom: 30px;
+                font-size: 36px;
+                color: $primary-blue;
+                text-shadow: 1px 1px $primary-dark;
+            }
+        }
+    }
+
+    
+}
