@@ -9,11 +9,9 @@ const Pane: React.FC = () => {
     const dispatch = useDispatch();
     const [isClosing, setIsClosing] = useState(false);
 
+    // NOTE(hajae): Pane close 애니메이션을 추가하기 위해
     const handleClosePane = () => {
-        // 패널 닫기 애니메이션 시작
         setIsClosing(true);
-
-        // 패널 닫기 애니메이션 이후 상태 변경
         setTimeout(() => {
             dispatch(closePane());
         }, 400);
