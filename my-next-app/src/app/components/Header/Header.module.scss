@@ -1,0 +1,26 @@
+@import 'src/styles/vars/colors';
+
+.header-wraaper {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 80px;
+    top: 0;
+
+    &.show {
+        background-color: $primary;
+        box-shadow: 1px 1px 5px $primary-dark;
+    }
+}
+
+.header-logo {
+    margin-left: 20px;
+    font-size: 38px;
+    font-weight: 600;
+    color: $primary-white;
+    text-shadow: 2px 1px $primary;
+}

@@ -1,0 +1,11 @@
+@import 'src/styles/vars/colors';
+
+.icon-wrapper {
+    margin: 5px;
+}
+
+.hover:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba($primary-dark, 0.4);
+}
