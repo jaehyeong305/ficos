@@ -1,7 +1,19 @@
 import React from "react";
 import styles from "./jobs.module.scss";
+import {CorporateUser} from "@/app/api/users/corporateUsersRepository";
 
-const Jobs: React.FC = () => {
+type FetchUserResponse = {
+    data: CorporateUser;
+};
+
+const fetchUser = async (): Promise<FetchUserResponse> => {
+    const res = await fetch('http://localhost:3000/api/users/1');
+    return res.json();
+}
+
+const Jobs: React.FC = async () => {
+    const { data: corporateUser } = await fetchUser()
+
     return (
         <div className={styles.jobsWrapper}>
             <div className={styles.jobsHeader}>
@@ -19,6 +31,9 @@ const Jobs: React.FC = () => {
                     <span className={styles.inactive}>채용흐름 관리</span>
                     <span className={styles.inactive}>지원폼 관리</span>
                 </div>
+            </div>
+            <div>
+                {corporateUser.email}
             </div>
         </div>
     )

@@ -31,7 +31,6 @@ const nextConfig = {
                 }
             });
         });
-
         return config;
     }
 }
