@@ -1,7 +1,15 @@
 import React from "react";
 import styles from "./jobs.module.scss";
+import {CorporateUser} from "@/app/api/users/corporateUsersRepository";
 
-const Jobs: React.FC = () => {
+const fetchUser = async (): Promise<CorporateUser> => {
+    const res = await fetch('http://localhost:3000/api/users/1');
+    return res.json();
+}
+
+const Jobs: React.FC = async () => {
+    const corporateUser: CorporateUser = await fetchUser()
+
     return (
         <div className={styles.jobsWrapper}>
             <div className={styles.jobsHeader}>
@@ -10,7 +18,7 @@ const Jobs: React.FC = () => {
                     <div className={styles.userInfo}>
                         <span>회사 명</span>
                         <span>채용담당자</span>
-                        <span>하재형 님</span>
+                        <span>{corporateUser.fullName} 님</span>
                         <div style={{backgroundImage: `url("/images/background/user.jpg")`}}></div>
                     </div>
                 </div>
